@@ -14,13 +14,13 @@ import com.example.demo.services.UsuarioService;
 @RestController
 @RequestMapping("/usuario")
 public class UsuariosController {
-    
+
     @Autowired
     private UsuarioService usuarioService;
 
     @PostMapping("/buscar")
     public ResponseEntity<PaginacionUsuario> buscar(@RequestBody PaginacionUsuario paginacion) {
-        
+
         return new ResponseEntity<PaginacionUsuario>(usuarioService.getUsuarios(paginacion), HttpStatus.OK);
     }
 }
