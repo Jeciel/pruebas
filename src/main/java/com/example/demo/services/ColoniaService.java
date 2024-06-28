@@ -786,7 +786,7 @@ public class ColoniaService {
 
         List<Colonia> result = new ArrayList<Colonia>();
         int index = 0;
-        while (result.size() <= 5 || index >= colonias.size()) {
+        while (result.size() <= 5 && index < colonias.size()) {
             Colonia c = colonias.get(index++);
             if (c.getNombre().toLowerCase().contains(text.toLowerCase())) {
                 result.add(c);
